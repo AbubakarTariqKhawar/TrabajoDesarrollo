@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abubakar</title>
+        <meta cherset="UTF-8"/>
+        <meta name="author" content="Abubakar Tariq Khawar">
+        <link rel="stylesheet" href="assets/css/style.css">
+		<script type="text/javascript">
+            function getuser(){
+                var result = "";
+                var list = '';
+                if(localStorage.length > 0){
+                    for(var i=1; i<=localStorage.length; i++){
+                        result = localStorage.getItem('dataAbubakar'+i+'');;
+                        const row = result.split(",");
+                        list += "<tr>";
+                        list += "<td>"+row['0']+"</td>";
+                        list += "<td>"+row['1']+"</td>";
+                        list += "<td>"+row['2']+"</td>";
+                        list += "<td>"+row['3']+"</td>";
+                        list += "</tr>";
+                    }
+                    var stable = '<table> <tr><th>Nombre</th><th>Apellido</th><th>Email/usuario</th><th>Contraseña</th></tr><tr> '+ list + '</tr></table>';
+                    document.getElementById('resultUser').innerHTML = stable;
+                }else{
+                    document.getElementById('resultUserE').innerHTML = "No hay ningún usuario creado.";
+                }
+            }
+        </script>
+    </head>
+    <body onload="getuser()">
+        <header>
+            <div class="Mainheader">
+                <div class="divLogo">
+                    <a class="logo" href="index.html"><b>TRABAJO DE DESARROLLO (Abubakar)</b></a>
+                </div>
+                <div class="registerDiv">
+                    <a class="registerlink" href="register.html">Registrar un usuario</a>
+                </div>
+            </div>
+        </header>
+        <div class="userdiv">
+            <div class="h2Div">
+                <h2>Usuarios</h2>
+            </div>
+            <div class="alluser">
+                <div id="resultUser"></div>
+                <div class="noUser" id="resultUserE"></div>
+            </div>
+        </div>
+        <footer class="footer">
+            <p>Trabajo de Desarrollo--Versión 1</p>
+        </footer>
+    </body>
+</html>

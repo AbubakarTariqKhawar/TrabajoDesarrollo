@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Abubakar</title>
+        <meta cherset="UTF-8"/>
+        <meta name="author" content="Abubakar Tariq Khawar">
+        <link rel="stylesheet" href="assets/css/style.css">
+		<script src="assets/js/js.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="Mainheader">
+                <div class="divLogo">
+                    <a class="logo" href="index.html"><b>TRABAJO DE DESARROLLO (Abubakar)</b></a>
+                </div>
+                <div class="registerDiv">
+                    <a class="registerlink" href="register.html">Registrar un usuario</a>
+                </div>
+            </div>
+        </header>
+        <div class="formulario">
+            <form>
+                <p class="forR"><b>Registrar-se</b></p>
+                <p><label> Nom* </label><input type="text" id="name" placeholder="Abubakar" required></p>
+				<p><label> Cognom* </label><input type="text" id="surname" placeholder="Tariq" required></p>
+				<p><label> Email/usuario* </label><input type="mail" id="mail" placeholder="atariqw@gmail.com" required></p>
+                <p><label> Contrasenya* </label><input type="password" id="password" value="" required></p>
+				<p><label> Repeteix contrasenya* </label><input type="password" id="password1" value="" required></p>
+				<p><label>*Camps oblitatoris</label></p>
+                <div class="formB">
+                    <button type="submit" onclick="formR(document.getElementById('name').value,document.getElementById('surname').value,document.getElementById('mail').value,document.getElementById('password').value,document.getElementById('password1').value)"> Registrar-se </button></br></br>
+                    <button type="button" onclick="location.href='index.html'"/> Mostrar Usuaris </button>
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            <p>Trabajo de Desarrollo--Versión 1</p>
+        </footer>
+    </body>
+</html>
